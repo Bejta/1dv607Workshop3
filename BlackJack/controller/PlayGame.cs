@@ -7,6 +7,8 @@ namespace BlackJack.controller
 {
     class PlayGame
     {
+        private view.IView m_view;
+
         public bool Play(model.Game a_game, view.IView a_view)
         {
             a_view.DisplayWelcomeMessage();
@@ -19,22 +21,22 @@ namespace BlackJack.controller
                 a_view.DisplayGameOver(a_game.IsDealerWinner());
             }
 
-            int input = a_view.GetInput();
+            view.userInput input = a_view.GetInput();
 
-            if (input == 'p')
+            if (input == view.userInput.Play)
             {
                 a_game.NewGame();
             }
-            else if (input == 'h')
+            else if (input == view.userInput.Hit)
             {
                 a_game.Hit();
             }
-            else if (input == 's')
+            else if (input == view.userInput.Stand)
             {
                 a_game.Stand();
             }
 
-            return input != 'q';
+            return input != view.userInput.Quit;
         }
     }
 }
