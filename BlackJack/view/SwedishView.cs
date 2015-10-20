@@ -8,29 +8,24 @@ namespace BlackJack.view
     class SwedishView : IView 
     {
 
-        private string play = "p";
-        private string hit = "h";
-        private string stand = "s";
-        private string quit = "q";
-
         public void DisplayWelcomeMessage()
         {
             System.Console.Clear();
             System.Console.WriteLine("Hej Black Jack Världen");
             System.Console.WriteLine("----------------------");
-            System.Console.WriteLine("Skriv {0} för att Spela, {1} för nytt kort, {2} för att stanna {3} för att avsluta\n", play, hit, stand, quit);
+            System.Console.WriteLine("Skriv 'p' för att Spela, 'h' för nytt kort, 's' för att stanna 'q' för att avsluta\n");
         }
         public userInput GetInput()
         {
             switch (System.Console.In.Read())
             {
-                case play:
+                case 'p':
                     return userInput.Play;
-                case hit:
+                case 'h':
                     return userInput.Hit;
-                case stand:
+                case 's':
                     return userInput.Stand;
-                case quit:
+                case 'q':
                     return userInput.Quit;
                 default:
                     return userInput.NoCommand;

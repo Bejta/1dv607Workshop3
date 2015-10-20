@@ -7,7 +7,7 @@ namespace BlackJack.controller
 {
     class PlayGame
     {
-        private view.IView m_view;
+        
 
         public bool Play(model.Game a_game, view.IView a_view)
         {
