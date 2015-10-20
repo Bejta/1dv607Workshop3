@@ -1,0 +1,5 @@
+C:\Users\Jasmin\Documents\WebbprogrammerareAK2\OOAD\Workshop3\blackjack_csharp-master\BlackJack\bin\Debug\BlackJack.exe
+C:\Users\Jasmin\Documents\WebbprogrammerareAK2\OOAD\Workshop3\blackjack_csharp-master\BlackJack\bin\Debug\BlackJack.pdb
+C:\Users\Jasmin\Documents\WebbprogrammerareAK2\OOAD\Workshop3\blackjack_csharp-master\BlackJack\obj\Debug\BlackJack.csprojResolveAssemblyReference.cache
+C:\Users\Jasmin\Documents\WebbprogrammerareAK2\OOAD\Workshop3\blackjack_csharp-master\BlackJack\obj\Debug\BlackJack.exe
+C:\Users\Jasmin\Documents\WebbprogrammerareAK2\OOAD\Workshop3\blackjack_csharp-master\BlackJack\obj\Debug\BlackJack.pdb
