@@ -1,5 +1,5 @@
-# blackjack_csharp
+# Workshop 3 
 
-Fork this code to work with C# in workshop 3.
+Workshop 3 from the course Object Oriented Analysis and Design Using UML - 1dv607
 
-Contains cs files and project files for Visual Studio 10. Also a modeling project is included, but this project will not load in certain versions of Visual Studio.
+* Jasmin Bejtovic email: jb223cp@student.lnu.se *
