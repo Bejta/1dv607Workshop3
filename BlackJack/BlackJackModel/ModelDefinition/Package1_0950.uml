@@ -226,6 +226,45 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="ece4250e-829d-4aaa-bb78-264fb4f2a9f5"
+            isDerived="false"
+            sourceEndRoleName="Dealer"
+            targetEndRoleName="m_winnerRule"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="6a641709-ded9-474f-a9c5-020045f91082"
+              LastKnownName="IWinningStrategy"
+              LastKnownLocation="Package2_0950.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9bb762f7-9393-4e9e-ae96-4b7be76f0990"
+                  name="Dealer"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="471196e1-1dd2-447b-a3be-5c17ac8314bf"
+                  name="m_winnerRule"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
       </class>
     </packageHasNamedElement>
@@ -365,6 +404,58 @@
                   <upperValueInternal>
                     <literalString
                       Id="d3010703-37c3-4704-8434-871deea4a3a8"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="41da97fb-abd5-45d0-92f4-72ed801788ec"
+            isDerived="false"
+            sourceEndRoleName="Player"
+            targetEndRoleName="m_observers"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="70449e77-1510-4efe-9d7d-c9b72b4bafc5"
+              LastKnownName="IObserver"
+              LastKnownLocation="Package2_0950.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="df7bc239-4d20-4ab3-8317-49dcd2c02e93"
+                  name="Player"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="233f5a5f-31e9-49af-8dab-0af3e9056bf5"
+                  name="m_observers"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="0b451a7b-d26e-4907-9f96-4346128bc945"
+                      name="Lower"
+                      value="0" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="5ff20b64-5ccb-4a58-bc24-520b186ee4d7"
                       name="Upper"
                       value="*" />
                   </upperValueInternal>

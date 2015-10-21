@@ -13,20 +13,61 @@
         isActiveClass="false">
         <suppliersInternal>
           <dependency
-            Id="9005e116-bc4e-4496-9ac1-df5cee2ef38e">
-            <interfaceMoniker
-              Id="daa2b7a8-1024-4de0-8428-0008d3ffa08b"
-              LastKnownName="IView"
-              LastKnownLocation="Package_0950.uml" />
-          </dependency>
-          <dependency
             Id="8e38dffa-b253-4815-baeb-df514e32673b">
             <classMoniker
               Id="08739ce8-677c-41a8-b0cf-e6796231e3a0"
               LastKnownName="Game"
               LastKnownLocation="Package1_0950.uml" />
           </dependency>
+          <dependency
+            Id="a0db1a46-e075-4386-ad67-13c9caa19056">
+            <interfaceMoniker
+              Id="70449e77-1510-4efe-9d7d-c9b72b4bafc5"
+              LastKnownName="IObserver"
+              LastKnownLocation="Package2_0950.uml" />
+          </dependency>
         </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="4f5d558a-e39b-49a1-b59f-eae911e34a26"
+            isDerived="false"
+            sourceEndRoleName="PlayGame"
+            targetEndRoleName="m_view"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="daa2b7a8-1024-4de0-8428-0008d3ffa08b"
+              LastKnownName="IView"
+              LastKnownLocation="Package_0950.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="708331f6-5df1-42cf-89d9-c4677050cc6b"
+                  name="PlayGame"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="95004375-adb4-43e2-94c6-1bcf6aef7898"
+                  name="m_view"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
       </class>
     </packageHasNamedElement>
   </packagedElements>

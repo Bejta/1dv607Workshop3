@@ -101,8 +101,99 @@
               LastKnownName="BasicHitStrategy"
               LastKnownLocation="Package2_0950.uml" />
           </dependency>
+          <dependency
+            Id="1da4572b-e5c7-44ce-9328-2fc8b9109961">
+            <classMoniker
+              Id="44da55ba-eef6-4564-bf92-9bbcc62f8e0e"
+              LastKnownName="TieDealerWin"
+              LastKnownLocation="Package2_0950.uml" />
+          </dependency>
+          <dependency
+            Id="8b46feea-1f79-4c42-a1ce-c54b28ee239f">
+            <classMoniker
+              Id="a3cd1d83-30e8-4f89-8ac7-56a358270679"
+              LastKnownName="TiePlayerWins"
+              LastKnownLocation="Package2_0950.uml" />
+          </dependency>
         </suppliersInternal>
       </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="6a641709-ded9-474f-a9c5-020045f91082"
+        name="IWinningStrategy"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="4caf9df7-b76c-4f0c-8bbd-23d26076b364">
+            <classMoniker
+              Id="aaf1cdbb-b246-4674-8bd7-c2ffcaeb6374"
+              LastKnownName="Dealer"
+              LastKnownLocation="Package1_0950.uml" />
+          </dependency>
+          <dependency
+            Id="ce8846c6-e489-47c9-bc4c-4787ef6ecc52">
+            <classMoniker
+              Id="e9cbcc72-94a8-4282-bffd-840431d0119d"
+              LastKnownName="Player"
+              LastKnownLocation="Package1_0950.uml" />
+          </dependency>
+        </suppliersInternal>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="44da55ba-eef6-4564-bf92-9bbcc62f8e0e"
+        name="TieDealerWin"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="1303f6bb-b745-47ad-a03d-054b19b46913">
+            <interfaceMoniker
+              Id="6a641709-ded9-474f-a9c5-020045f91082"
+              LastKnownName="IWinningStrategy"
+              LastKnownLocation="Package2_0950.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="a3cd1d83-30e8-4f89-8ac7-56a358270679"
+        name="TiePlayerWins"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="35966db1-72d6-47ce-b0e0-fc38ca94b688">
+            <interfaceMoniker
+              Id="6a641709-ded9-474f-a9c5-020045f91082"
+              LastKnownName="IWinningStrategy"
+              LastKnownLocation="Package2_0950.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="70449e77-1510-4efe-9d7d-c9b72b4bafc5"
+        name="IObserver"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="d273576e-0ca8-42b6-b026-0ed6708a7a8f">
+            <classMoniker
+              Id="a6713820-b5ef-4e7b-9982-6130438f8429"
+              LastKnownName="Card"
+              LastKnownLocation="Package1_0950.uml" />
+          </dependency>
+        </suppliersInternal>
+      </Interface>
     </packageHasNamedElement>
   </packagedElements>
 </package>
