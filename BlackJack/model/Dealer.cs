@@ -14,7 +14,6 @@ namespace BlackJack.model
         private rules.IHitStrategy m_hitRule;
         private rules.IWinningStrategy m_winnerRule;
 
-
         public Dealer(rules.RulesFactory a_rulesFactory)
         {
             m_newGameRule = a_rulesFactory.GetNewGameRule();
@@ -37,6 +36,7 @@ namespace BlackJack.model
             {
                 this.DealCard(c);
             }
+
         }
 
         public bool NewGame(Player a_player)

@@ -13,7 +13,9 @@ namespace BlackJack
             view.IView v = new view.SimpleView(); // new view.SwedishView();
             controller.PlayGame ctrl = new controller.PlayGame();
 
-            while (ctrl.Play(g, v));
+            g.SubscribeToCardDrawn(ctrl);
+
+            while (ctrl.Play(g, v)) ;
         }
     }
 }

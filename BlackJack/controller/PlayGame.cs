@@ -2,17 +2,28 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using BlackJack.model;
+using BlackJack.view;
 
 namespace BlackJack.controller
 {
-    class PlayGame
+    class PlayGame:IObserver
     {
         
+        private view.IView m_view;
+        public void cardDrawn(Card c)
+        {
+            m_view.DoPause();
+            m_view.DisplayCard(c);
+        }
 
         public bool Play(model.Game a_game, view.IView a_view)
         {
+            m_view = a_view;
+
             a_view.DisplayWelcomeMessage();
             
+          
             a_view.DisplayDealerHand(a_game.GetDealerHand(), a_game.GetDealerScore());
             a_view.DisplayPlayerHand(a_game.GetPlayerHand(), a_game.GetPlayerScore());
 
