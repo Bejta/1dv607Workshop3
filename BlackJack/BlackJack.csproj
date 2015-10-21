@@ -78,7 +78,11 @@
     <Compile Include="model\rules\IHitStrategy.cs" />
     <Compile Include="model\rules\InternationalNewGameStrategy.cs" />
     <Compile Include="model\rules\INewGameStrategy.cs" />
+    <Compile Include="model\rules\IWinningStrategy.cs" />
     <Compile Include="model\rules\RulesFactory.cs" />
+    <Compile Include="model\rules\SoftSeventeenGameRule.cs" />
+    <Compile Include="model\rules\TieDealerWin.cs" />
+    <Compile Include="model\rules\TiePlayerWins.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="view\IView.cs" />

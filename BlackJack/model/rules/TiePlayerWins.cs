@@ -7,7 +7,7 @@ namespace BlackJack.model.rules
 {
     class TiePlayerWins:IWinningStrategy
     {
-        public bool Win(Player a_player, Dealer a_dealer, int maxScore)
+        public bool Win(Dealer a_dealer,Player a_player, int maxScore)
         {
             if (a_player.CalcScore() > maxScore)
             {

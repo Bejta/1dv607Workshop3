@@ -12,12 +12,31 @@ namespace BlackJack.model
 
         private rules.INewGameStrategy m_newGameRule;
         private rules.IHitStrategy m_hitRule;
+        private rules.IWinningStrategy m_winnerRule;
 
 
         public Dealer(rules.RulesFactory a_rulesFactory)
         {
             m_newGameRule = a_rulesFactory.GetNewGameRule();
             m_hitRule = a_rulesFactory.GetHitRule();
+            m_winnerRule = a_rulesFactory.GetWinningRule();
+        }
+
+        public void DealCard(Player a_player, bool visible)
+        {
+            Card c;
+            c = m_deck.GetCard();
+            c.Show(visible);
+
+            //if null is send as argument, dealer deals
+            if (a_player != null)
+            {
+                a_player.DealCard(c);
+            }
+            else
+            {
+                this.DealCard(c);
+            }
         }
 
         public bool NewGame(Player a_player)
@@ -36,11 +55,7 @@ namespace BlackJack.model
         {
             if (m_deck != null && a_player.CalcScore() < g_maxScore && !IsGameOver())
             {
-                Card c;
-                c = m_deck.GetCard();
-                c.Show(true);
-                a_player.DealCard(c);
-
+                DealCard(a_player, true);
                 return true;
             }
             return false;
@@ -48,15 +63,7 @@ namespace BlackJack.model
 
         public bool IsDealerWinner(Player a_player)
         {
-            if (a_player.CalcScore() > g_maxScore)
-            {
-                return true;
-            }
-            else if (CalcScore() > g_maxScore)
-            {
-                return false;
-            }
-            return CalcScore() >= a_player.CalcScore();
+            return m_winnerRule.Win(this, a_player, g_maxScore);
         }
 
         public bool IsGameOver()
@@ -75,10 +82,7 @@ namespace BlackJack.model
                 ShowHand();
                 while(m_hitRule.DoHit(this))
                 {
-                    Card c;
-                    c = m_deck.GetCard();
-                    c.Show(true);
-                    DealCard(c);
+                    DealCard(null, true);
                 }
                 return true;
             }
